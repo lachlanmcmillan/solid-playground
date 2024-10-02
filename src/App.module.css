@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: white;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  margin-bottom: 5rem;
+  
+  & button {
+    --main-color: white;
+
+    text-transform: uppercase;
+    padding: 6px 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    color: var(--main-color);
+    cursor: pointer;
+
+    border-bottom: 2px solid var(--main-color);
+
+    &[data-active=true] {
+      border-bottom-color: darkslateblue;
+    }
+
+    &:not([data-active=true]):hover {
+      --main-color: rgb(193, 193, 248);
+    }
+
+  }
+}
+
+.content {
+  height: 500px;
+
+}
